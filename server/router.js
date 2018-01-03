@@ -13,7 +13,7 @@ router.get('/photosReq', (req, res, next) => {
   axios.get(test, {'headers': { 'Authorization': 'Token token=' + auth, 'Access-Control-Request-Headers': 'authorization'}})
   .then(data => {
     let photos = data.data.nyplAPI.response.result;
-    res.send(photos)
+    res.send(photos);
   })
   .catch(next);
 });
